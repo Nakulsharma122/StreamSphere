@@ -7,7 +7,18 @@
 
 
 // things to do 
-displaly custom error msg for the login and sign up page '
+1. display custom error msg for the login and sign up page 
+
+
+Structure of the browser page 
+1.  Main container 
+   Videobackground
+   VideoTitle
+2. Secondary Container 
+  Movielist * n 
+  cards * n 
+  
+
 
 
 
