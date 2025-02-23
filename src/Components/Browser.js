@@ -7,7 +7,7 @@ import MainContainer from './MainContainer';
 const Browser = () => {
     useNowPlayingMovies();
   return (
-    <div>
+    <div className=''>
          <div><Header/></div>
          <MainContainer></MainContainer>
          <SecondaryContainer></SecondaryContainer>

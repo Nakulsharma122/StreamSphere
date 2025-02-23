@@ -6,11 +6,12 @@ const MainContainer = () => {
     const movies = useSelector((store) => store.movies?.nowPlayingMovies); //  optional Chaining if not found return undefined .
 if (!movies) return;
 const mainMovie = movies[0];
-console.log(mainMovie);
+
+const {original_title, overview,id} = mainMovie;
   return (
     <div>
-        <VideoTitle></VideoTitle>
-        <VideoBackground></VideoBackground>
+        <VideoTitle title = {original_title} overview = {overview}></VideoTitle>
+        <VideoBackground movieId={id}></VideoBackground>
     </div>
   )
 }

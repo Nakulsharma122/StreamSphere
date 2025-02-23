@@ -71,7 +71,7 @@ export const Login = () => {
   return (
     <div>
     <Header/>
-         <div className='absolute '>
+         <div className='absolute w-full'>
        <img src="https://images.pexels.com/photos/23495578/pexels-photo-23495578/free-photo-of-a-group-of-people-sitting-on-a-couch-watching-tv.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt ="background"/>
         </div>
 
