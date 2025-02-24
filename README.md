@@ -24,6 +24,14 @@ Structure of the browser page
 
 
 
+flow of the website :-
+
+2. Secondary Container : -
+      1 .movieList - 
+         1. Popular 
+          2. trending 
+          3. Now Playing 
+
 
 
 

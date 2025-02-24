@@ -47,9 +47,8 @@ export const Header = () => {
     
        {user && 
        <div className='pt-5'>
-       <button onClick={handleSignOut}>
-       <Button></Button>
-          </button>
+       <Button onClick={handleSignOut} >
+       </Button>
           </div> 
            }
         </div>

@@ -1,11 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = ({ onClick }) => {
   return (
     <StyledWrapper>
-      <button className="button"> Sign Out 
-      </button>
+      <button className="button" onClick={onClick}> Sign Out </button>
     </StyledWrapper>
   );
 }
