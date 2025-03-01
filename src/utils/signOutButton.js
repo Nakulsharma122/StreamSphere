@@ -26,6 +26,7 @@ const StyledWrapper = styled.div`
    text-transform: uppercase;
    color: var(--color);
    z-index: 1;
+   margin-top :20px;
   }
 
   .button::before, .button::after {

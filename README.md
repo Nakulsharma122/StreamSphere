@@ -8,6 +8,8 @@
 
 // things to do 
 1. display custom error msg for the login and sign up page 
+2.Multi language features to the website . 
+
 
 
 Structure of the browser page 
