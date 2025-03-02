@@ -9,6 +9,9 @@
 // things to do 
 1. display custom error msg for the login and sign up page 
 2.Multi language features to the website . 
+3. use custom hooks if needed handleGptSearch to remove the load .
+4. when i hover on the poster of the search and trailer going to start .
+ 
 
 
 
@@ -44,7 +47,10 @@ flow of the website :-
 
 
 
+split function in api result 
 
+
+store in movies results 
 
 
 
