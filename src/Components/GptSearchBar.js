@@ -18,7 +18,7 @@ const GptSearchBar = () => {
       return json.results;
   }
   const handleGptSearch =  async () =>{
-     // calling gpt AI 
+    
      console.log(searchText.current.value);
      const gptQuery = "Act as Movie Recommedation system and suggest some movie for the query "+ searchText.current.value + 
      "only give me name of 5 movies , comma separted like the example result given ahead . Example : Hera Pheri , Don , Dhol , Golmaal , Koi Mil Gaya";
@@ -44,8 +44,8 @@ const GptSearchBar = () => {
     }
   }
   return (
-    <div className='pt-[20%] flex justify-center'>
-       <form className='w-1/2 bg-black grid grid-cols-12' onSubmit={(e) => e.preventDefault()}> 
+    <div className='pt-[60%] md:pt-[20%] flex justify-center'>
+       <form className='w-[100%] md:w-1/2 bg-black grid grid-cols-12' onSubmit={(e) => e.preventDefault()}> 
         <input  ref ={searchText}
         type="text"
         className='p-4 m-4 col-span-9'

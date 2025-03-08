@@ -12,7 +12,7 @@ const Button = ({ onClick }) => {
 const StyledWrapper = styled.div`
   .button {
    --color: #00A97F;
-   padding: 0.8em 1.7em;
+   padding: 0.8em 1em;
    background-color: transparent;
    border-radius: .3em;
    position: relative;
@@ -20,13 +20,13 @@ const StyledWrapper = styled.div`
    cursor: pointer;
    transition: .5s;
    font-weight: 400;
-   font-size: 17px;
+   font-size: 13px; 
    border: 1px solid;
    font-family: inherit;
    text-transform: uppercase;
    color: var(--color);
    z-index: 1;
-   margin-top :20px;
+   margin-top :14px;
   }
 
   .button::before, .button::after {
