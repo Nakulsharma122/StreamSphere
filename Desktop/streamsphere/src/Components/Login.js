@@ -3,10 +3,9 @@ import { Header } from './Header';
 import {checkValidData, checkValidData1}  from '../utils/validate';
 import { auth } from '../utils/firebase';
 import { createUserWithEmailAndPassword ,signInWithEmailAndPassword, updateProfile} from "firebase/auth";
-
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
-import { user_avatar } from '../utils/constants';
+import { backgroundImage, user_avatar } from '../utils/constants';
 
 
 
@@ -20,8 +19,11 @@ export const Login = () => {
 
   const handleButtonClick = () =>{
 
-      const message = isSignInForm ? checkValidData(email.current.value, password.current.value): checkValidData1(name.current.value,email.current.value, password.current.value) ;
+      const message = isSignInForm ? checkValidData(email.current.value, password.current.value):
+       checkValidData1(name.current.value,email.current.value, password.current.value) ;
+
       setErrorMessage(message);
+
       if (message)return ;
       if (!isSignInForm){
          // Sign up 
@@ -69,13 +71,13 @@ export const Login = () => {
     setIsSignInForm (!isSignInForm);
   }
   return (
-    <div>
+    <div className=''>
     <Header/>
-         <div className='absolute w-full'>
-       <img src="https://images.pexels.com/photos/23495578/pexels-photo-23495578/free-photo-of-a-group-of-people-sitting-on-a-couch-watching-tv.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt ="background"/>
+         <div className='absolute pt-20 h-screen w-screen   md:absolute md:w-full'>
+       <img src={backgroundImage} alt ="background" className='h-full w-full object-cover'/>
         </div>
 
-     <form  onSubmit={(e)=>{e.preventDefault()}}className = "absolute p-12 bg-black w-3/12 my-36 mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70">
+     <form  onSubmit={(e)=>{e.preventDefault()}}className ="absolute p-12 bg-black    md:w-3/12   my-36  mx-14 md:mx-auto right-0 left-0 text-white rounded-lg bg-opacity-70">
         <h1 className="font-bold text-3xl px-2 py-3" >{isSignInForm ? "Sign  In" :"Sign Up"} </h1>
 
       {!isSignInForm &&(

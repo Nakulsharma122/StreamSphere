@@ -1,4 +1,3 @@
-import { api_options } from '../utils/constants';
 import { useDispatch, useSelector } from 'react-redux';
 import { setNowPlayingMovies } from '../utils/movieSlice';
 import { useEffect } from 'react';
@@ -11,8 +10,9 @@ const useNowPlayingMovies = () => {
     try {
       
       const response = await fetch(
-        'https://api.themoviedb.org/3/movie/now_playing?language=en-US&page=1',
-        api_options
+
+        'https://summer-mouse-99b5.nakusharma29.workers.dev/api/movie/now_playing?language=en-US&page=1'
+        
       );
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);

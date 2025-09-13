@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from "react-redux";
-import { api_options } from "../utils/constants";
 import { setAddTrailerVideo } from "../utils/movieSlice";
 import { useEffect } from "react";
 
@@ -9,8 +8,8 @@ const useMovieTrailer = (movieId) =>{
     const dispatch= useDispatch();
     const trailerVideo = useSelector((store) => store.movies.trailerVideo);
     const getMovieVideos = async () =>{
-      const data = await fetch('https://api.themoviedb.org/3/movie/'+movieId+'/videos?language=en-US', api_options);
-      const json = await data.json();
+      const response = await fetch(`https://summer-mouse-99b5.nakusharma29.workers.dev/api/movie/${movieId}/videos?language=en-US`);
+      const json = await response.json();
       const filteredData  = json.results.filter(video => video.type === "Trailer");
     
       const trailer = filteredData.length ? filteredData[0] : json.results[0];

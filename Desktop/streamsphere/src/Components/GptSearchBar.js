@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import Language from '../utils/LanguageConstant'
 import { useDispatch, useSelector } from 'react-redux'
 import openai from '../utils/openai';
-import { api_options } from '../utils/constants';
+
 import { addGptMovieResult } from '../utils/gptSlice';
 
 const GptSearchBar = () => {
@@ -12,7 +12,7 @@ const GptSearchBar = () => {
 
   const searchMovieTMB =  async (movie) =>{
       const data = await fetch(
-        "https://api.themoviedb.org/3/search/movie?query="+movie+"&include_adult=false&language=en-US&page=1",api_options
+        "https://summer-mouse-99b5.nakusharma29.workers.dev/api/search/movie?query="+movie+"&include_adult=false&language=en-US&page=1"
       );
       const json = await data.json();
       return json.results;

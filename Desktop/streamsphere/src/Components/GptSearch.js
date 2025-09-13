@@ -6,7 +6,7 @@ const GptSearch = () => {
   return (
     
 
-    <div className='bg-green-300 h-screen'>
+    <div className='bg-green-300 min-h-screen'>
       <GptSearchBar></GptSearchBar>
       <GptMovieSuggestion></GptMovieSuggestion>
     </div>
